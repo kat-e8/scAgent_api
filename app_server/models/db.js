@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 require('./players');
 
-const dbURI = 'mongodb://localhost/scagent';
+const dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
 mongoose.connect(dbURI);
 
 mongoose.connection.on('connected', () => {
