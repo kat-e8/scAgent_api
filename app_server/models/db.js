@@ -4,7 +4,7 @@ require('./players');
 
 //connection string
 //const dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
-const dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/scAgent';
+let dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/scAgent';
 if(process.env.NODE_ENV === 'production') {
     dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/scAgent';
 }
