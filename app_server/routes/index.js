@@ -17,9 +17,9 @@ router.get('/players/player', ctrlPlayers.playerInfo);
 
 
 
-// router
-//     .route('/players/:playerid/review/new')
-//     .get(ctrlPlayers.addReview)
+router
+    .route('/players/player/review/new')
+    .get(ctrlPlayers.addReview)
 //     .post(ctrlPlayers.doAddReview);
 
 /* About Page*/

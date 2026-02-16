@@ -126,11 +126,12 @@ const playerInfo = (req, res) => {
 };
 
 
-// const addReview = (req, res) => {
-//     getTagInfo(req, res, 
-//         (req, res, responseData) => renderReviewForm(req, res, responseData)
-//     );
-// };
+const addReview = (req, res) => {
+    res.render('player-review-form', {title: 'Add Review'});
+    // getTagInfo(req, res, 
+    //     (req, res, responseData) => renderReviewForm(req, res, responseData)
+    // );
+};
 
 // const doAddReview = (req, res) => {
 //     tagid = req.params.tagid;
@@ -191,8 +192,8 @@ const playerInfo = (req, res) => {
 
 module.exports = {
     playerList,
-    playerInfo
-    // addReview,
+    playerInfo,
+    addReview,
     // doAddReview,
     // doAddPlayer,
     // addPlayer
