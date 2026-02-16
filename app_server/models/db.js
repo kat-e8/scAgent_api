@@ -1,16 +1,41 @@
-const mongoose = require('mongoose');
-require('./players');
+// const mongoose = require('mongoose');
+
+// //require('./tags');
+
+// const dbURI = 'mongodb://localhost/e8pi';
+// mongoose.connect(dbURI);
+
+// mongoose.connection.on('connected', () => {
+//     console.log(`Mongoose connected to ${dbURI}`);
+// });
+
+// mongoose.connection.on('error', err => {
+//     console.log('Mongoose connection error: ', err);
+// });
+
+// mongoose.connection.on('disconnected', () => {
+//     console.log('Mongoose disconnected');
+// });
 
 
-//connection string
-//const dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
-let dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/scAgent';
-if(process.env.NODE_ENV === 'production') {
-    dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/scAgent';
-}
+// /*const gracefulShutdown = (msg, callback) => {
+//     mongoose.connection.close(() => {
+//         console.log(`Mongoose disconnected through ${msg}`);
+//         callback();
+//     });
+// };
 
-console.log(process.env.NODE_ENV);
 
-mongoose.connection.on('connected', () => {
-    console.log(`Mongoose connected to ${dbURI}`);
-});
+// process.once('SIGUSR2', () => {
+//     gracefulShutdown('nodemon restart', () => {
+//         process.kill(process.id, 'SIGUSR2');
+//     });
+// });
+
+// process.on('SIGINT', () => {
+//     gracefulShutdown('app termination', () => {
+//         process.exit(0);
+//     });
+// });*/
+
+// require('./tags');

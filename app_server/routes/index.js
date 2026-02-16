@@ -1,14 +1,27 @@
 const express = require('express');
 const router = express.Router();
+
 const ctrlPlayers = require('../controllers/players');
 const ctrlOthers = require('../controllers/others');
 
-/* Player pages. */
-router.get('/', ctrlPlayers.playerList);
-router.get('/player', ctrlPlayers.playerInfo);
-router.get('/player/review/new', ctrlPlayers.addReview);
 
-/** Other pages */
+/* Player Pages */
+// router.get('/players/:playerid', ctrlPlayers.playerInfo);
+// router.get('/players/add-Player', ctrlPlayers.addPlayer);
+
+router
+    .route('/players')
+    .get(ctrlPlayers.playerList);
+//    .post(ctrlPlayers.doAddPlayer);
+
+
+
+// router
+//     .route('/players/:playerid/review/new')
+//     .get(ctrlPlayers.addReview)
+//     .post(ctrlPlayers.doAddReview);
+
+/* About Page*/
 router.get('/about', ctrlOthers.about);
-
+router.get('/', ctrlOthers.home);
 module.exports = router;
