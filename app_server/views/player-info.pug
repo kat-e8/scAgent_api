@@ -5,35 +5,76 @@ include _includes/sharedHTMLfunctions
 block content
   .row.banner
     .col-12
-      h1 #{pageHeader.title} | #{pageHeader.strapline}
+      h1 MightyRelo
   .row
     .col-12.col-lg-9
       .row
         .col-12.col-md-6
           p.rating
-            +outputRating(player.rating)
-          p= player.name
+            i.fas.fa-star
+            i.fas.fa-star
+            i.fas.fa-star
+            i.far.fa-star
+            i.far.fa-star
+          p 123 Street, Town
+          .card.card-primary
+            .card-block 
+              h2.card-title Training Times
+              p.card-text Monday - Friday : 7:00am - 7:00pm
+              p.card-text Saturday : 8:00am - 5:00pm
+              p.card-text Sunday : closed
+          .card.card-primary
+            .card-block 
+              h2.card-title Positions
+              span.badge.badge-warning 
+                i.fa.fa-check 
+                | &nbsp; False 9
+              | &nbsp;
+              span.badge.badge-warning 
+                i.fa.fa-check 
+                | &nbsp; Inside Center
+              | &nbsp;
+              span.badge.badge-warning 
+                i.fa.fa-check 
+                | &nbsp; Left Wing
+              | &nbsp; 
         .col-12.col-md-6.location-map
           .card.card-primary
             .card-block
-              h2.card-title Player Pics
+              h2.card-title Player Pictures
               img.img-fluid.rounded(src=`http://maps.googleapis.com/maps/api/staticmap?center=-26.2309,28.0583&zoom=17&size=400x350&sensor=false&markers=-26.2309,28.0583&scale=2`)
       .row
         .col-12
           .card.card-primary.review-card
             .card-block
-              a.btn.btn-primary.float-right(href=`/tags/${player._id}/annotation/new`) Add Review
-              h2.card-title Reviews
-              each review in player.reviews
-                .row.review
-                  .col-12.no-gutters.review-header
-                    span.rating.push
-                      +outputRating(player.rating)
-                    span.reviewAuthor.push #{review.coach}
-                    small.reviewTimestamp
-                      +formatDate(review.createdOn)
-                  .col-12
-                    p !{(review.comment).replace(/\n/g, '<br/>')}
+              a.btn.btn-primary.float-right(href=`/players/player/review/new`) Add Review
+              h2.card-title Player Reviews
+              .row-review 
+                .col-12.no-gutters.review-header
+                  span.rating
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.far.fa-star
+                    i.far.fa-star
+                  span.reviewAuthor Hlubi Mehlomakhulu
+                  small.reviewTimesamp 14 February 2026
+                .col-12
+                  p Technically astute, Tactically inept.
+              .row-review 
+                .col-12.no-gutters.review-header
+                  span.rating
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.fas.fa-star
+                    i.far.fa-star
+                    i.far.fa-star
+                  span.reviewAuthor Alex Ferguson
+                  small.reviewTimesamp 17 February 2026
+                .col-12
+                  p Flat Footed, Lacks basic comprehension skills.
     .col-12.col-lg-3
-      p.lead #{player.name} #{sidebar.context}
-      p= sidebar.callToAction
+      p.lead
+        | MightyRelo is on Ayobayo! because he has the potential of one day turning into a professional.
+      p 
+            | If you've assessed they player, please leave a review to help them improve.                                                                                        

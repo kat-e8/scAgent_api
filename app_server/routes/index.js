@@ -6,13 +6,14 @@ const ctrlOthers = require('../controllers/others');
 
 
 /* Player Pages */
-// router.get('/players/:playerid', ctrlPlayers.playerInfo);
-// router.get('/players/add-Player', ctrlPlayers.addPlayer);
-
 router
     .route('/players')
     .get(ctrlPlayers.playerList);
 //    .post(ctrlPlayers.doAddPlayer);
+
+router.get('/players/player', ctrlPlayers.playerInfo);
+// router.get('/players/add-Player', ctrlPlayers.addPlayer);
+
 
 
 

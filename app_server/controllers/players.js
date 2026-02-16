@@ -119,10 +119,11 @@ const playerList = (req, res) => {
 // };
 
 
-// const playerInfo = (req, res) => {
-//     getTagInfo(req, res, 
-//         (req, res, responseData) => renderDetailsPage(req, res, responseData));
-// };
+const playerInfo = (req, res) => {
+    // getTagInfo(req, res, 
+    //     (req, res, responseData) => renderDetailsPage(req, res, responseData));
+    res.render('player-info', {title: 'Player info'});
+};
 
 
 // const addReview = (req, res) => {
@@ -189,10 +190,10 @@ const playerList = (req, res) => {
 //hit mongo api to update existing record with new tvs
 
 module.exports = {
-    playerList
-    // playerInfo,
+    playerList,
+    playerInfo
     // addReview,
     // doAddReview,
     // doAddPlayer,
     // addPlayer
-}
+};
