@@ -4,25 +4,21 @@ include _includes/sharedHTMLfunctions
 block content
      .row.banner
         .col-12
-             h1 Ayo!
-                small &nbsp; Find players to manage near you!
+             h1= pageHeader.title
+                small &nbsp; #{pageHeader.strapline}
      .row
         .col-12.col-md-8
-            .card
-                .card-block
-                    h4
-                        a(href='/players/player') Maiterelo
-                        small &nbsp;
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.fas.fa-star
-                            i.far.fa-star
-                            i.far.fa-star
-                        span.badge.badge-pill.badge-default.float-right 100m
-                    p.address 123 Street, Town 
-                    .facilities 
-                        span.badge.badge-warning False 9
-                        span.badge.badge-warning Inside Center
-                        span.badge.badge-warning Left Wing
+            each player in players
+                .card
+                    .card-block
+                        h4
+                            a(href='/players/player')= player.name
+                            small &nbsp;
+                               +outputRating(player.rating)
+                            span.badge.badge-pill.badge-default.float-right= player.weight
+                        p.address= player.address
+                        .facilities
+                            each position in player.positions
+                                span.badge.badge-warning= position 
         .col-12.col-md-4
-            p.lead Ayo! helps you manage players and their development.
+            p.lead= sidebar

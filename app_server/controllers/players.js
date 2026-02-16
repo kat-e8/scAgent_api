@@ -50,13 +50,43 @@ const renderPlayerList = (req, res, responseBody) => {
 
 const playerList = (req, res) => {
     res.render('player-list', {
-        title: 'Player List',
+        title: 'Ayobayo! Track and Manage Players.',
             pageHeader: {
-            title: 'Players',
-            strapline: 'Monitor Player Progress',
-            callToAction: 'Random call to action',
-            context: 'random context'
-        }
+            title: 'Ayobayo!',
+            strapline: 'Monitor Player Progress from anywhere.',
+        },
+        sidebar: "Looking for a player management app? Ayobayo! helps you track and monitor player development as they make it through your academy. Let Ayobayo! help you get organized.",
+        players: [{
+            "name": "Ikaneng Maiterelo",
+            "address": "123 Magolego Avenue, PhumlaMqashi, Johannesburg",
+            "rating": 3,
+            "age": 11,
+            "height": 1.56,
+            "weight": 60,
+            "positions": [
+                "Left Wing, Inside Center, False 9"
+            ]
+        },{
+            "name": "Ditlako Montsho",
+            "address": "12 Mkhonto Street, Boikhutso, Johannesburg",
+            "rating": 4,
+            "age": 12,
+            "height": 1.66,
+            "weight": 65,
+            "positions": [
+                "Center Back, Full Back, DMF"
+            ]
+        },{
+            "name": "Mumuni Gogodze",
+            "address": "12 Apollo Crescent, Upsate Hills, Johannesburg",
+            "rating": 2,
+            "age": 10,
+            "height": 1.46,
+            "weight": 45,
+            "positions": [
+                "Center Midfield, Left Back, Right Wing Forward"
+            ]
+        }]
      //   players: responseBody,
     });
     //body = {}
