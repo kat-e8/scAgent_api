@@ -2,8 +2,11 @@ const mongoose = require('mongoose');
 
 // //require('./tags');
 
-const dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
+let dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
 mongoose.connect(dbURI);
+if (process.env.NODE_ENV == 'production'){
+    dbRUI = 'mongodb+srv://ayobayo:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo'
+}
 
 mongoose.connection.on('connected', () => {
     console.log(`Mongoose connected to ${dbURI}`);
