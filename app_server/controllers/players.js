@@ -32,8 +32,8 @@ const playerList = (req, res) => {
         method: 'GET',
         json: {}
     };
-    console.log(requestOptions);
     request(requestOptions, (err, {statusCode}, body) => {
+        console.log(body);
         if(statusCode === 200 && body.length){
             renderPlayerList(req, res, body);
         } else {
