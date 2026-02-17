@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 // //require('./tags');
 
-let dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
+let dbURI = 'mongodb+srv://katlego:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
 mongoose.connect(dbURI);
 
-var environment = process.env.NODE_ENV || 'development';
+// var environment = process.env.NODE_ENV || 'development';
 
-if (environment === 'production'){
-    dbRUI = 'mongodb+srv://katlego:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
-}
+// if (environment === 'production'){
+//     dbRUI = 'mongodb+srv://katlego:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
+// }
 
 
 mongoose.connection.on('connected', () => {
