@@ -4,9 +4,13 @@ const mongoose = require('mongoose');
 
 let dbURI = 'mongodb://katmint.dala-cirius.ts.net/scagent';
 mongoose.connect(dbURI);
-if (process.env.NODE_ENV === 'production'){
+
+var environment = process.env.NODE_ENV || 'development';
+
+if (environment === 'production'){
     dbRUI = 'mongodb+srv://katlego:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
 }
+
 
 mongoose.connection.on('connected', () => {
     console.log(`Mongoose connected to ${dbURI}`);
