@@ -1,7 +1,5 @@
 const mongoose = require('mongoose');
 
-// //require('./tags');
-
 let dbURI = 'mongodb://102.209.119.232/scagent';
 mongoose.connect(dbURI);
 

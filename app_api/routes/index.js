@@ -8,7 +8,7 @@ const ctrlReviews = require('../controllers/reviews');
 
 router
     .route('/players')
-    .get(ctrlPlayers.playersByName)
+    .get(ctrlPlayers.playersReadAll)
     .post(ctrlPlayers.playersCreate);
 
 router

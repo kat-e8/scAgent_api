@@ -37,7 +37,14 @@ const playerSchema = new mongoose.Schema({
     address: {
         type: String,
         required: true
-    }
+    },
+    age: Number,
+    height: Number,
+    weight: Number,
+    positions: [String],
+    trainingTimes: [trainingTimeSchema],
+    reviews: [reviewSchema]
+
 });
 
 mongoose.model('Player', playerSchema);
