@@ -19,7 +19,7 @@ router.get('/players/player', ctrlPlayers.playerInfo);
 
 router
     .route('/players/player/review/new')
-    .get(ctrlPlayers.addReview)
+    .get(ctrlPlayers.addReview);
 //     .post(ctrlPlayers.doAddReview);
 
 /* About Page*/
