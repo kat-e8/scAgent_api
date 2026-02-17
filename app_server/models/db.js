@@ -2,8 +2,7 @@ const mongoose = require('mongoose');
 
 // //require('./tags');
 
-let dbURI = 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
-
+let dbURI = 'mongodb://102.209.119.232/scagent';
 mongoose.connect(dbURI);
 
 // var environment = process.env.NODE_ENV || 'development';
