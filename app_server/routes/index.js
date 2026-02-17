@@ -11,14 +11,14 @@ router
     .get(ctrlPlayers.playerList);
 //    .post(ctrlPlayers.doAddPlayer);
 
-router.get('/players/player', ctrlPlayers.playerInfo);
+router.get('/players/:playerid', ctrlPlayers.playerInfo);
 // router.get('/players/add-Player', ctrlPlayers.addPlayer);
 
 
 
 
 router
-    .route('/players/player/review/new')
+    .route('/players/:playerid/review/new')
     .get(ctrlPlayers.addReview);
 //     .post(ctrlPlayers.doAddReview);
 

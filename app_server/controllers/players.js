@@ -58,55 +58,9 @@ const renderPlayerList = (req, res, responseBody) => {
         },
         sidebar: "Looking to track athlete development? Ayobayo helps you manage activities and records of players in your Team",
         players: responseBody,
+        message
     });
 }
-
-
-
-// const playerList = (req, res) => {
-//     res.render('player-list', {
-//         title: 'Ayobayo! Track and Manage Players.',
-//             pageHeader: {
-//             title: 'Ayobayo!',
-//             strapline: 'Monitor Player Progress from anywhere.',
-//         },
-//         sidebar: "Looking for a player management app? Ayobayo! helps you track and monitor player development as they make it through your academy. Let Ayobayo! help you get organized.",
-//         players: [{
-//             "name": "Ikaneng Maiterelo",
-//             "address": "123 Magolego Avenue, PhumlaMqashi, Johannesburg",
-//             "rating": 3,
-//             "age": 11,
-//             "height": 1.56,
-//             "weight": 60,
-//             "positions": [
-//                 "Left Wing", "Inside Center", "False 9"
-//             ]
-//         },{
-//             "name": "Ditlako Montsho",
-//             "address": "12 Mkhonto Street, Boikhutso, Johannesburg",
-//             "rating": 4,
-//             "age": 12,
-//             "height": 1.66,
-//             "weight": 65,
-//             "positions": [
-//                 "Center Back", "Full Back", "DMF"
-//             ]
-//         },{
-//             "name": "Mumuni Gogodze",
-//             "address": "12 Apollo Crescent, Upsate Hills, Johannesburg",
-//             "rating": 2,
-//             "age": 10,
-//             "height": 1.46,
-//             "weight": 45,
-//             "positions": [
-//                 "Center Midfield", "Left Back", "Right Wing Forward"
-//             ]
-//         }]
-//      //   players: responseBody,
-//     });
-//     //body = {}
-//     //renderPlayerList(req, res, body);
-// };
 
 
 const renderDetailsPage = (req, res, player) => {
@@ -150,58 +104,16 @@ const getPlayerInfo = (req, res, callback) => {
 
 
 const playerInfo = (req, res) => {
-     getTagInfo(req, res, 
+    console.log('hi');
+     getPlayerInfo(req, res, 
          (req, res, responseData) => renderDetailsPage(req, res, responseData));
-    // res.render('player-info', {
-    //     title: 'Player Details.',
-    //         pageHeader: {
-    //         title: 'Player Details',
-    //         strapline: 'Monitor Player Progress from anywhere.',
-    //     },
-    //     sidebar: "is on Ayobayo! because he has the potential of one day turning into a professional.",
-    //     lead: "",
-    //     player: {
-    //         "name": "Ikaneng Maiterelo",
-    //         "address": "123 Magolego Avenue, PhumlaMqashi, Johannesburg",
-    //         "rating": 3,
-    //         "age": 11,
-    //         "height": 1.56,
-    //         "weight": 60,
-    //         "positions": [
-    //             "Left Wing", "Inside Center", "False 9"
-    //         ],
-    //         "trainingTimes": [
-    //             {
-    //             "days": "Monday - Friday",
-    //             "opening": "9:00am",
-    //             "closing": "3:00pm",
-    //             "closed": false
-    //             },
-    //             {
-    //             "days": "Saturday",
-    //             "opening": "9:00am",
-    //             "closing": "1:00pm",
-    //             "closed": false
-    //             },
-    //             {
-    //             "days": "Sunday",
-    //             "closed": true
-    //             }
-    //         ],
-    //         reviews: [{
-    //             "trainer": "Alex Fegurson",
-    //             "rating": 4,
-    //             "timestamp": "2026-03-11T22:00:00.000Z",
-    //             "reviewText": "Moderately improved tactical awareness."
-    //         }]
-    //     }
-    // });
+    
 };
 
 
 const addReview = (req, res) => {
  //   res.render('player-review-form', {title: 'Add Review'});
-    getTagInfo(req, res, 
+    getPlayerInfo(req, res, 
         (req, res, responseData) => renderReviewForm(req, res, responseData)
     );
 };

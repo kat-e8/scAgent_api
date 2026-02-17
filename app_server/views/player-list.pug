@@ -8,14 +8,16 @@ block content
                 small &nbsp; #{pageHeader.strapline}
      .row
         .col-12.col-md-8
+            .error= message
             each player in players
                 .card
                     .card-block
                         h4
-                            a(href='/players/player')= player.name
+                            a(href=`/players/${player._id}`)= player.name
                             small &nbsp;
                                +outputRating(player.rating)
-                            span.badge.badge-pill.badge-default.float-right= player.weight
+                            span.badge.badge-pill.badge-default.float-right 
+                                +formatWeight(player.weight)
                         p.address= player.address
                         .facilities
                             each position in player.positions

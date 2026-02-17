@@ -12,3 +12,9 @@ mixin formatDate(dateString)
   - const y = date.getFullYear();
   - const output = `${d} ${m} ${y}`
   =output
+
+mixin  formatWeight(weight)
+  - let unit = 'kg';
+  - const thisWeight = parseFloat(weight).toFixed(1);
+  - const output = thisWeight + unit;
+  =output
