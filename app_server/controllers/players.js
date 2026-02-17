@@ -64,7 +64,7 @@ const playerList = (req, res) => {
             "height": 1.56,
             "weight": 60,
             "positions": [
-                "Left Wing, Inside Center, False 9"
+                "Left Wing", "Inside Center", "False 9"
             ]
         },{
             "name": "Ditlako Montsho",
@@ -74,7 +74,7 @@ const playerList = (req, res) => {
             "height": 1.66,
             "weight": 65,
             "positions": [
-                "Center Back, Full Back, DMF"
+                "Center Back", "Full Back", "DMF"
             ]
         },{
             "name": "Mumuni Gogodze",
@@ -84,7 +84,7 @@ const playerList = (req, res) => {
             "height": 1.46,
             "weight": 45,
             "positions": [
-                "Center Midfield, Left Back, Right Wing Forward"
+                "Center Midfield", "Left Back", "Right Wing Forward"
             ]
         }]
      //   players: responseBody,
@@ -152,7 +152,50 @@ const playerList = (req, res) => {
 const playerInfo = (req, res) => {
     // getTagInfo(req, res, 
     //     (req, res, responseData) => renderDetailsPage(req, res, responseData));
-    res.render('player-info', {title: 'Player info'});
+    res.render('player-info', {
+        title: 'Player Details.',
+            pageHeader: {
+            title: 'Player Details',
+            strapline: 'Monitor Player Progress from anywhere.',
+        },
+        sidebar: "is on Ayobayo! because he has the potential of one day turning into a professional.",
+        lead: "",
+        player: {
+            "name": "Ikaneng Maiterelo",
+            "address": "123 Magolego Avenue, PhumlaMqashi, Johannesburg",
+            "rating": 3,
+            "age": 11,
+            "height": 1.56,
+            "weight": 60,
+            "positions": [
+                "Left Wing", "Inside Center", "False 9"
+            ],
+            "trainingTimes": [
+                {
+                "days": "Monday - Friday",
+                "opening": "9:00am",
+                "closing": "3:00pm",
+                "closed": false
+                },
+                {
+                "days": "Saturday",
+                "opening": "9:00am",
+                "closing": "1:00pm",
+                "closed": false
+                },
+                {
+                "days": "Sunday",
+                "closed": true
+                }
+            ],
+            reviews: [{
+                "trainer": "Alex Fegurson",
+                "rating": 4,
+                "timestamp": "2026-03-11T22:00:00.000Z",
+                "reviewText": "Moderately improved tactical awareness."
+            }]
+        }
+    });
 };
 
 
