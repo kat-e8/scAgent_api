@@ -36,7 +36,7 @@ block content
         .col-12
           .card.card-primary.review-card
             .card-block
-              a.btn.btn-primary.float-right(href=`/players/player/review/new`) Add Review
+              a.btn.btn-primary.float-right(href=`/players/${player._id}/review/new`) Add Review
               h2.card-title Player Reviews
               each review in player.reviews
                 .row-review 

@@ -104,7 +104,6 @@ const getPlayerInfo = (req, res, callback) => {
 
 
 const playerInfo = (req, res) => {
-    console.log('hi');
      getPlayerInfo(req, res, 
          (req, res, responseData) => renderDetailsPage(req, res, responseData));
     
@@ -112,7 +111,6 @@ const playerInfo = (req, res) => {
 
 
 const addReview = (req, res) => {
- //   res.render('player-review-form', {title: 'Add Review'});
     getPlayerInfo(req, res, 
         (req, res, responseData) => renderReviewForm(req, res, responseData)
     );
@@ -122,8 +120,9 @@ const doAddReview = (req, res) => {
     playerid = req.params.playerid;
     path = `/api/players/${playerid}/reviews`;
     postData = {
-        author: req.body.name,
-        comment: req.body.comment
+        trainer: req.body.trainer,
+        rating: req.body.rating,
+        reviewText: req.body.reviewText
     };
     requestOptions = {
         url: `${apiOptions.server}${path}`,
@@ -132,7 +131,7 @@ const doAddReview = (req, res) => {
     };
     request(requestOptions, (err, {statusCode}, body) => {
         if(statusCode === 201){
-            res.redirect(`/players/${playeridd}`);
+            res.redirect(`/players/${playerid}`);
         } else {
             showError(req, res, statusCode);
         }

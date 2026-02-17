@@ -15,12 +15,10 @@ router.get('/players/:playerid', ctrlPlayers.playerInfo);
 // router.get('/players/add-Player', ctrlPlayers.addPlayer);
 
 
-
-
 router
     .route('/players/:playerid/review/new')
-    .get(ctrlPlayers.addReview);
-//     .post(ctrlPlayers.doAddReview);
+    .get(ctrlPlayers.addReview)
+    .post(ctrlPlayers.doAddReview);
 
 /* About Page*/
 router.get('/about', ctrlOthers.about);

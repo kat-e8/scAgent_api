@@ -8,13 +8,12 @@ block content
     .col-12.col-md-8
       form#addReview(action="", method="post", role="form")
         .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="name") Coach
+          label.col-10.col-sm-2.col-form-label(for="trainer") Coach
           .col-12.col-sm-10
-            input#name.form-control(name="name")
+            input#name.form-control(name="trainer")
         .form-group.row
           label.col-10.col-sm-2.col-form-label(for="rating") Rating
           .col-12.col-sm-2
-            //- input#name.form-control(name="rating")
             select#rating.form-control.input-sm(name="rating")
               option 5
               option 4
@@ -22,8 +21,8 @@ block content
               option 2
               option 1
         .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="review") Review
+          label.col-10.col-sm-2.col-form-label(for="reviewText") Review
           .col-12.col-sm-10
-            textarea#review.form-control(name="review", rows="5")
+            textarea#review.form-control(name="reviewText", rows="5")
         button.btn.btn-primary.float-right Add my review
     .col-12.col-md-4
