@@ -28,6 +28,11 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
+app.set('port', (process.env.PORT || 5000));
+app.listen(app.get('port'), () => {
+  console.log('Node server is running on port ' + app.get('port'));
+});
+
 // error handler
 app.use(function(err, req, res) {
   // set locals, only providing error in development
