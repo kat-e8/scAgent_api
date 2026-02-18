@@ -8,6 +8,7 @@ require('./app_api/models/db');
 
 const indexRouter = require('./app_server/routes/index');
 const apiRouter = require('./app_api/routes/index');
+const { profile } = require('console');
 
 const app = express();
 
@@ -29,8 +30,9 @@ app.use(function(req, res, next) {
 });
 
 app.set('port', (process.env.PORT || 5000));
-app.listen(app.get('port'), () => {
-  console.log('Node server is running on port ' + app.get('port'));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log('Node server is running on port ' + PORT);
 });
 
 // error handler
