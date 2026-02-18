@@ -29,11 +29,11 @@ app.use(function(req, res, next) {
   next(createError(404));
 });
 
-app.set('port', (process.env.PORT || 5000));
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log('Node server is running on port ' + PORT);
-});
+// app.set('port', (process.env.PORT || 5000));
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log('Node server is running on port ' + PORT);
+// });
 
 // error handler
 app.use(function(err, req, res) {
