@@ -5,6 +5,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const favicon = require('serve-favicon');
 require('./app_api/models/db');
+require('dotenv').config();
 
 const indexRouter = require('./app_server/routes/index');
 const apiRouter = require('./app_api/routes/index');
@@ -30,9 +31,8 @@ app.use(function(req, res, next) {
 });
 
 // app.set('port', (process.env.PORT || 5000));
-// const PORT = process.env.PORT || 3000;
 // app.listen(PORT, () => {
-//   console.log('Node server is running on port ' + PORT);
+//    console.log('Node server is running on port ' + PORT);
 // });
 
 // error handler
