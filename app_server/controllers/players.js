@@ -1,15 +1,14 @@
 const request = require('request');
 
 const apiOptions = {
-    server: 'mongodb+srv://heroku:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo'
-    //server: `http://localhost:${process.env.PORT}`
+    server: `http://localhost:${process.env.PORT}`
 };
 
- if (process.env.NODE_ENV === 'production'){
-     apiOptions.server = `http://localhost:${process.env.PORT}`;
- }
+console.log('env: ' + `${process.env.NODE_ENV}`);
 
- console.log('listening on ' + `${apiOptions.server}`);
+ if (process.env.NODE_ENV === 'production'){
+     apiOptions.server = 'https://production';
+ }
 
 const showError = (req, res, status) => {
     let title = '';
