@@ -27,7 +27,24 @@ block content
                 span.badge.badge-warning 
                   i.fa.fa-check 
                   | &nbsp; #{position}
+                | &nbsp;
+          .card.card-primary
+            .card-block 
+              h2.card-title Physical Attributes
+              span.badge.badge-warning 
+                i.link Age:
+                | &nbsp; #{player.age}
+              | &nbsp;
+              span.badge.badge-warning 
+                i.link Height:
+                | &nbsp;
+                +formatHeight(player.height)
+              | &nbsp;
+              span.badge.badge-warning 
+                i.link Weight:
                 | &nbsp; 
+                +formatWeight(player.weight)
+              | &nbsp;
         .col-12.col-md-6.location-map
           .card.card-primary
             .card-block
