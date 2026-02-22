@@ -4,7 +4,7 @@ const apiOptions = {
     server: `http://localhost:${process.env.PORT}`
 };
 
-console.log('env: ' + `${process.env.NODE_ENV}`);
+//console.log('env: ' + `${process.env.NODE_ENV}`);
 
  if (process.env.NODE_ENV === 'production'){
      apiOptions.server = 'https://production';
