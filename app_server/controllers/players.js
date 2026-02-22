@@ -6,7 +6,7 @@ const apiOptions = {
 
 
  if (process.env.NODE_ENV === 'production'){
-     apiOptions.server = 'https://mysterious-tundra-55657-c65d3baa16c7.herokuapp.com/';
+     apiOptions.server = 'http://ayobayo.net';
  }
 
  console.log('srver: ' + `${apiOptions.server}`);
