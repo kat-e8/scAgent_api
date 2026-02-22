@@ -11,8 +11,6 @@ if (environment === 'production'){
      dbRUI = 'mongodb+srv://katlego:K%40stx8909@cluster0.7hhl6hq.mongodb.net/ayobayo';
 }
 
-console.log("db set to: " + `${dbURI}`);
-
 
 mongoose.connection.on('connected', () => {
     console.log(`Mongoose connected to ${dbURI}`);

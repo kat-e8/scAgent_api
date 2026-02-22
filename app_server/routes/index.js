@@ -13,7 +13,7 @@ router
 
 router.get('/players/:playerid', ctrlPlayers.playerInfo);
 router.get('/add-Player', ctrlPlayers.addPlayer);
-
+router.get('/delete/:playerid', ctrlPlayers.deletePlayer);
 
 router
     .route('/players/:playerid/review/new')

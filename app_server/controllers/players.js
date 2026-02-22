@@ -175,6 +175,22 @@ const doAddPlayer = (req, res) => {
    });
 };
 
+const deletePlayer = (req, res) => {
+    path = `/api/players/${req.params.playerid}`;
+    requestOptions = {
+        url: `${apiOptions.server}${path}`,
+        method: 'DELETE',
+        json: {}
+    };
+    request(requestOptions, (err, {statusCode}, responseBody) => {
+        if(statusCode === 204){
+            res.redirect(`/players`)
+        } else {
+            showError(req, res, statusCode);
+        }
+    });
+};
+
 
 
 module.exports = {
@@ -183,5 +199,6 @@ module.exports = {
     addReview,
     doAddReview,
     doAddPlayer,
-    addPlayer
+    addPlayer,
+    deletePlayer
 };
