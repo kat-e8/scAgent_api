@@ -3,25 +3,33 @@ extends layout
 block content
   .row.banner
     .col-12
-      h1 Add Tag to Canary Dataset
+      h1 Add Player to Ayobayo
   .row
     .col-12.col-md-8
-      form(action="/tags", method="post", role="form")
+      form(action="/players", method="post", role="form")
         .form-group.row
           label.col-10.col-sm-2.col-form-label(for="name") Name
           .col-12.col-sm-10
             input#name.form-control(name="name")
         .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="description") Description
+          label.col-10.col-sm-2.col-form-label(for="address") Address
           .col-12.col-sm-10
-            textarea#name.form-control(name="description")
+            textarea#name.form-control(name="address")
         .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="value") Value
+          label.col-10.col-sm-2.col-form-label(for="age") Age
           .col-12.col-sm-10
-            input#name.form-control(name="value")
+            input#name.form-control(name="age")
         .form-group.row
-          label.col-10.col-sm-2.col-form-label(for="quality") Quality
+          label.col-10.col-sm-2.col-form-label(for="height") Height
           .col-12.col-sm-10
-            input#review.form-control(name="quality")
-        button.btn.btn-primary.float-right Add Tag
+            input#review.form-control(name="height")
+        .form-group.row
+          label.col-10.col-sm-2.col-form-label(for="weight") Weight
+          .col-12.col-sm-10
+            input#review.form-control(name="weight")
+        .form-group.row
+          label.col-10.col-sm-2.col-form-label(for="positions") Positions
+          .col-12.col-sm-10
+            input#review.form-control(name="positions")
+        button.btn.btn-primary.float-right Add Player
     .col-12.col-md-4

@@ -72,7 +72,7 @@ const renderDetailsPage = (req, res, player) => {
         title: player.name,
         pageHeader: {
             title: player.name,
-            strapline: 'random strapline'
+            strapline: 'Personal Info and Routines'
         },
         sidebar: {
                 context: 'random context that does not matter for now',
@@ -159,7 +159,7 @@ const doAddPlayer = (req, res) => {
         age: req.body.age,
         height: req.body.height,
         weight: req.body.weight,
-        positions: req.body.positions
+        positions: req.body.positions.split(',')
     };
     requestOptions = {
     url: `${apiOptions.server}${path}`,
@@ -168,7 +168,7 @@ const doAddPlayer = (req, res) => {
    };
    request(requestOptions, (err, {statusCode}, responseBody) => {
     if(statusCode === 201){
-            res.redirect(`/`);
+            res.redirect(`/players`);
         } else {
             showError(req, res, statusCode);
         }

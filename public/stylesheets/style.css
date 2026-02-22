@@ -111,6 +111,10 @@ h4 small {
   background-repeat: no-repeat;
   }
 
+  .margin-bottom {
+    margin-bottom: 10px;
+  }
+
   .push {
     padding-right: 15px;
   }
